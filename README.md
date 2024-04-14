@@ -1,2 +1,2 @@
-# Base-de-Dados-Pizzaria-MODELO-L-GICO-
+# Base de Dados Pizzaria (MODELO LÓGICO)
 Atividade segundo semestre de ADS, Banco de dados
