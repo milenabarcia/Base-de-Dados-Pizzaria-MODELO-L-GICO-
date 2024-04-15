@@ -167,3 +167,15 @@ INSERT INTO Pizza (ingredientes, sabor, preço, descrição, tamanho, embalagem_
 ('Névoa de mistério, segredos antigos, fatias de mago sábio, queijo de mistério ancestral', 'Mago Místico', 110.99, 'Uma pizza enigmática com um sabor profundo e uma textura crocante.', 'Familiar', 30, 30, 30);
 
 SELECT*FROM Pizza
+
+-- Crie um relatório com todas as pizzas e os pizzaiolos aptos a produzi-las--
+SELECT Pizza.sabor, Pizzaiolo.nome FROM Pizza INNER JOIN Pizzaiolo ON Pizza.pizzaiolo_id = Pizzaiolo.id;
+
+-- Crie um relatório com todas as pizzas e seus ingredientes--
+ SELECT sabor, ingredientes FROM Pizza;
+
+--Crie um relatório com todos os ingredientes e as pizzas onde são utilizados--
+SELECT ingredientes, sabor FROM Pizza;
+
+--Crie um relatório com os sabores de todas as pizzas, o nome dos pizzaiolos que as fazem e as instruções para produzi-las--
+SELECT Pizza.sabor, Pizzaiolo.nome, Receita.instruções FROM Pizza INNER JOIN Pizzaiolo ON Pizza.pizzaiolo_id = Pizzaiolo.id INNER JOIN Receita ON Pizza.receita_id = Receita.id;
